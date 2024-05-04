@@ -5,7 +5,13 @@ dotenv.config({ path: '.env' });
 
 export const db = knex({
   client: 'mysql2',
-  connection: process.env.DATABASE_URL,
+  connection: {
+    host: process.env.DATABASE_HOST,
+    port: process.env.DATABASE_PORT,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
+  },
   searchPath: ['knex', 'public'],
   pool: { min: 2, max: 7 }
 });
