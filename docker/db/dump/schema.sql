@@ -1,5 +1,5 @@
 
-CREATE DATABASE IF NOT EXISTS `nonstoptalk`
+CREATE DATABASE IF NOT EXISTS `nonstoptalk`;
 USE `nonstoptalk`;
 
 CREATE TABLE IF NOT EXISTS `chats` (
