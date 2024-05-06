@@ -9,7 +9,6 @@ services:
     env_file:
       - ./server/.env
     volumes:
-      # crie um volume anonimo para o node_modules
       - /usr/src/app/node_modules
 
   socket:
@@ -45,9 +44,4 @@ volumes:
     driver: local
     driver_opts:
       device: ./docker/db/data
-  # crie um volume anonimo para o node_modules
   node_modules:
-  
-  
-
-
